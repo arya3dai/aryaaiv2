@@ -1,0 +1,64 @@
+
+===========================================
+   AARYA AI - LOCAL SETUP INSTRUCTIONS
+===========================================
+
+This guide will help you run the Aarya AI chatbot on your local computer.
+
+-------------------------------------------
+1. PREREQUISITES
+-------------------------------------------
+Before starting, ensure you have the following installed:
+- Node.js (Version 16 or higher)
+  Download here: https://nodejs.org/
+
+-------------------------------------------
+2. INSTALLATION
+-------------------------------------------
+1. Open your terminal (Command Prompt, PowerShell, or Terminal).
+2. Navigate to this project folder.
+3. Run the following command to install dependencies:
+
+   npm install
+
+-------------------------------------------
+3. STARTING THE APP
+-------------------------------------------
+1. Once installation is complete, start the development server:
+
+   npm run dev
+
+2. The terminal will show a local URL, usually:
+   http://localhost:5173
+
+3. Open that URL in your web browser.
+
+-------------------------------------------
+4. CONFIGURATION (First Time Setup)
+-------------------------------------------
+By default, the app runs in "Mock Mode" using your browser's local storage. 
+To unlock full features, you need to configure it.
+
+A. CONNECTING FIREBASE (For Knowledge Base Sync)
+   1. Go to https://console.firebase.google.com/ and create a project.
+   2. Create a Firestore Database (Start in Test Mode).
+   3. Enable Authentication (Email/Password).
+   4. Go to Project Settings > General > "Your apps" > SDK Setup and Configuration.
+   5. Copy the `firebaseConfig` code snippet.
+   6. In Aarya AI, click the Settings (Gear Icon) > Connections.
+   7. Paste the snippet into the text box and click "Save Configuration".
+
+B. CONNECTING GEMINI AI (For Fallback Responses & Vision)
+   1. Go to https://aistudio.google.com/app/apikey and get an API Key.
+   2. In Aarya AI, click Settings > Connections.
+   3. Paste the key into the "Gemini API Key" field.
+   4. Click Save.
+
+-------------------------------------------
+5. TROUBLESHOOTING
+-------------------------------------------
+- "API Key Missing": Ensure you pasted the Gemini Key in the Settings menu, not just the code.
+- "Permission Denied": Check your Firestore Security Rules in the Firebase Console.
+- Camera not working: Ensure your browser has permission to access the webcam.
+
+Enjoy using Aarya AI!

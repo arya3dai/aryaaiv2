@@ -1,0 +1,7 @@
+{
+  "name": "Aarya AI",
+  "description": "A custom logic chatbot powered by a Firebase knowledge base. Features a local keyword-scoring engine, real-time database training, and a modern chat interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
